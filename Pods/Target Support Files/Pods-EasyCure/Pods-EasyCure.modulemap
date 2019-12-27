@@ -1,0 +1,6 @@
+framework module Pods_EasyCure {
+  umbrella header "Pods-EasyCure-umbrella.h"
+
+  export *
+  module * { export * }
+}
