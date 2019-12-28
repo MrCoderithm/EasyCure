@@ -50,6 +50,9 @@
                                 <state key="normal" title="Get Directions to Clinic">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <segue destination="W6z-ju-bHj" kind="modal" id="fEQ-wk-yMi"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AxE-Bk-Mzh" customClass="RoundedWhiteButton" customModule="EasyCure" customModuleProvider="target">
                                 <rect key="frame" x="37" y="687" width="349" height="50"/>
@@ -311,28 +314,14 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yor-Rp-8qG">
-                                                    <rect key="frame" x="171" y="30" width="139" height="34"/>
+                                                    <rect key="frame" x="27" y="16" width="217" height="54"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D5z-ZZ-RHF">
-                                                    <rect key="frame" x="39" y="31" width="89" height="32"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="On" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EVP-X4-400">
-                                                    <rect key="frame" x="8" y="37" width="23" height="21"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="With" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="StB-W3-Deo">
-                                                    <rect key="frame" x="112" y="36" width="51" height="21"/>
+                                                    <rect key="frame" x="252" y="16" width="162" height="46"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
@@ -471,7 +460,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <pickerView opaque="NO" alpha="0.80000000000000004" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fdV-Wd-vYE">
-                                <rect key="frame" x="0.0" y="263" width="414" height="423"/>
+                                <rect key="frame" x="0.0" y="179" width="414" height="537"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <connections>
@@ -483,14 +472,6 @@
                                 <rect key="frame" x="0.0" y="96" width="414" height="75"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="23"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Oh2-7u-uT7">
-                                <rect key="frame" x="0.0" y="179" width="414" height="76"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -511,7 +492,7 @@
                                 <rect key="frame" x="66" y="735" width="282" height="97"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.15799340610000001" green="0.78705894949999999" blue="0.32603177430000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <state key="normal" title="Book">
+                                <state key="normal" title="Book Appointment">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
@@ -523,7 +504,6 @@
                     </view>
                     <connections>
                         <outlet property="appointmentPicker" destination="fdV-Wd-vYE" id="xGy-iz-9Li"/>
-                        <outlet property="lblBooking" destination="Oh2-7u-uT7" id="g8L-sK-v9e"/>
                         <outlet property="lblName" destination="Bet-Dt-8kM" id="MfG-yr-xra"/>
                     </connections>
                 </viewController>
@@ -719,6 +699,18 @@
                                                 </state>
                                                 <connections>
                                                     <segue destination="QPt-iP-BR4" kind="modal" id="Y6X-L4-2Ri"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Iqm-Gk-jF3" customClass="RoundedWhiteButton" customModule="EasyCure" customModuleProvider="target">
+                                                <rect key="frame" x="267" y="27" width="124" height="45"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" title="Reset Password ">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="BookAppointment" destination="alD-4k-hxg" eventType="touchUpInside" id="2m1-WI-j83"/>
+                                                    <action selector="submitAction:" destination="Rec-Hs-HU8" eventType="touchUpInside" id="VTO-VV-O2u"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -999,6 +991,75 @@
             </objects>
             <point key="canvasLocation" x="-167" y="-24"/>
         </scene>
+        <!--Map View Controller-->
+        <scene sceneID="mJx-ym-5u3">
+            <objects>
+                <viewController id="W6z-ju-bHj" customClass="MapViewController" customModule="EasyCure" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Klr-cK-vuI"/>
+                        <viewControllerLayoutGuide type="bottom" id="Zkf-Mv-r9c"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="JkH-DR-8nb">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Where will you be coming from?" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fil-iW-nsV">
+                                <rect key="frame" x="0.0" y="78" width="414" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="W6z-ju-bHj" id="he8-Mx-x0X"/>
+                                </connections>
+                            </textField>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="fat-4Z-AI8">
+                                <rect key="frame" x="0.0" y="543" width="414" height="353"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="W6z-ju-bHj" id="eKb-UM-HBU"/>
+                                    <outlet property="delegate" destination="W6z-ju-bHj" id="Jbc-Pl-8ey"/>
+                                </connections>
+                            </tableView>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="V7A-yP-loG">
+                                <rect key="frame" x="0.0" y="116" width="414" height="430"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <outlet property="delegate" destination="W6z-ju-bHj" id="uXb-Cn-ERZ"/>
+                                </connections>
+                            </mapView>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="poy-V8-bRt">
+                                <rect key="frame" x="0.0" y="34" width="414" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <items>
+                                    <navigationItem title="Map" id="sPP-yY-GD8">
+                                        <barButtonItem key="leftBarButtonItem" title="Back" id="MVL-vu-yT1">
+                                            <connections>
+                                                <segue destination="gLK-SP-LhU" kind="unwind" unwindAction="unwindToHomeVCWithSender:" id="0fb-PH-r6v"/>
+                                            </connections>
+                                        </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" title="Get Directions" id="Wrh-3X-0qr">
+                                            <connections>
+                                                <action selector="findNewLocationWithSender:" destination="W6z-ju-bHj" id="DoD-Hn-f6y"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="myMapView" destination="V7A-yP-loG" id="Xga-CF-szB"/>
+                        <outlet property="myTableView" destination="fat-4Z-AI8" id="cbz-gi-wyT"/>
+                        <outlet property="tbLocEntered" destination="fil-iW-nsV" id="HYI-rl-jxo"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dD7-jw-ren" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="gLK-SP-LhU" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="1586.9565217391305" y="-773.4375"/>
+        </scene>
     </scenes>
     <resources>
         <image name="Backbutton.png" width="1280" height="1279"/>
@@ -1009,6 +1070,6 @@
         <image name="signupBackground.jpg" width="1382.4000244140625" height="864"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="cy0-if-5kL"/>
+        <segue reference="Y6X-L4-2Ri"/>
     </inferredMetricsTieBreakers>
 </document>

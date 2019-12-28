@@ -49,8 +49,8 @@ class BookingViewController: UIViewController , UIPickerViewDelegate, UIPickerVi
                     
                     
                     let uid = Auth.auth().currentUser?.uid
-                    self.ref?.child("BookedApt").child(uid!).child("userEmail").setValue(appointmentName)
-                    self.ref?.child("BookedApt").child(uid!).child("Booking").setValue(appointmentDay)
+                    self.ref?.child("BookedAppointment").child(uid!).child("userEmail").setValue(Auth.auth().currentUser?.email!)
+                    self.ref?.child("BookedAppointment").child(uid!).child("Booking").setValue(appointmentDay)
                 }
                 self.appointmentPicker.reloadAllComponents()
             }
@@ -66,7 +66,27 @@ class BookingViewController: UIViewController , UIPickerViewDelegate, UIPickerVi
     }
     
     @IBAction func BookAppointment(){
-        lblBooking.text = ("Booked Appointment with " + selectedRow)
+        
+        var title = ""
+        var message = ""
+        
+        if selectedRow.count == 0 {
+            title = "Error!"
+            message = ("Please Select One")
+        } else {
+            title = "Success!"
+            message = ("Booked Appointment on " + selectedRow)
+        }
+        
+        let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        
+        let defaultAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
+        alertController.addAction(defaultAction)
+        
+        self.present(alertController, animated: true, completion: nil)
+        
+        //lblBooking.text = ("Booked Appointment with " + selectedRow)
+        
        }
     
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
@@ -87,7 +107,8 @@ class BookingViewController: UIViewController , UIPickerViewDelegate, UIPickerVi
             switch row{
               case 0...AptList.count - 1:
                   let apt = self.AptList[row]
-                  self.title = apt.Name! + " " + apt.Day! + " " + apt.Time!
+                  // apt.Name! + " " +
+                  self.title = apt.Day! + " at " + apt.Time!
                   label.text = self.title
 
             default:

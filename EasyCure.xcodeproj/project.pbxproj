@@ -37,6 +37,7 @@
 		419D2EA223B488C100751F16 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 419D2EA123B488C100751F16 /* SignUpViewController.swift */; };
 		419D2EA623B48E6F00751F16 /* InitialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 419D2EA523B48E6F00751F16 /* InitialViewController.swift */; };
 		419D2EAA23B491E200751F16 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 419D2EA923B491E200751F16 /* MenuViewController.swift */; };
+		681D1C4123B7129C000753C6 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 681D1C4023B7129C000753C6 /* MapViewController.swift */; };
 		68C800CD23B4962000A19750 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68C800CC23B4962000A19750 /* LoginViewController.swift */; };
 		68C800D223B5DCE300A19750 /* bluebackground.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 68C800D123B5DCE300A19750 /* bluebackground.jpg */; };
 		68C800D423B5E1FD00A19750 /* Backbutton.png in Resources */ = {isa = PBXBuildFile; fileRef = 68C800D323B5E1FD00A19750 /* Backbutton.png */; };
@@ -79,6 +80,7 @@
 		419D2EA123B488C100751F16 /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		419D2EA523B48E6F00751F16 /* InitialViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InitialViewController.swift; sourceTree = "<group>"; };
 		419D2EA923B491E200751F16 /* MenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
+		681D1C4023B7129C000753C6 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		68C800CC23B4962000A19750 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		68C800D123B5DCE300A19750 /* bluebackground.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = bluebackground.jpg; sourceTree = "<group>"; };
 		68C800D323B5E1FD00A19750 /* Backbutton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Backbutton.png; sourceTree = "<group>"; };
@@ -187,6 +189,7 @@
 		419D2E6123B4693F00751F16 /* View Controller */ = {
 			isa = PBXGroup;
 			children = (
+				681D1C4023B7129C000753C6 /* MapViewController.swift */,
 				419D2EA523B48E6F00751F16 /* InitialViewController.swift */,
 				419D2EA923B491E200751F16 /* MenuViewController.swift */,
 				68C800CC23B4962000A19750 /* LoginViewController.swift */,
@@ -378,6 +381,7 @@
 				419D2EA623B48E6F00751F16 /* InitialViewController.swift in Sources */,
 				419D2EA023B4882800751F16 /* RoundedWhiteButton.swift in Sources */,
 				419D2E7F23B46C3800751F16 /* CustomMessageCell.swift in Sources */,
+				681D1C4123B7129C000753C6 /* MapViewController.swift in Sources */,
 				419D2EA223B488C100751F16 /* SignUpViewController.swift in Sources */,
 				419D2E7023B4694D00751F16 /* NoteTableViewController.swift in Sources */,
 				419D2E7823B4694D00751F16 /* NotesViewController.swift in Sources */,

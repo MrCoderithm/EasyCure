@@ -32,9 +32,47 @@ class LoginViewController:UIViewController, UITextFieldDelegate {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         emailField.becomeFirstResponder()
-     
-        
     }
+    
+    @IBAction func submitAction(_ sender: AnyObject) {
+        
+        if self.emailField.text == "" {
+            let alertController = UIAlertController(title: "Oops!", message: "Please enter an email.", preferredStyle: .alert)
+            
+            let defaultAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
+            alertController.addAction(defaultAction)
+            
+            present(alertController, animated: true, completion: nil)
+            
+        } else {
+            Auth.auth().sendPasswordReset(withEmail: self.emailField.text!, completion: { (error) in
+                
+                var title = ""
+                var message = ""
+                
+                if error != nil {
+                    title = "Error!"
+                    message = (error?.localizedDescription)!
+                } else {
+                    title = "Success!"
+                    message = "Password reset email sent."
+                    self.emailField.text = ""
+                }
+                
+                let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
+                
+                let defaultAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
+                alertController.addAction(defaultAction)
+                
+                self.present(alertController, animated: true, completion: nil)
+            })
+        }
+    }
+    
+    
+    
+    
+    
     
      func buttonAnimation() {
         view.addVerticalGradientLayer(topColor: primaryColor, bottomColor: secondaryColor)

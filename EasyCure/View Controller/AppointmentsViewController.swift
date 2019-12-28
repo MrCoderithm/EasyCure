@@ -20,7 +20,8 @@ class AppointmentsViewController: UIViewController, UITableViewDelegate, UITable
         
         lblEmail.text = Auth.auth().currentUser?.email!
         
-        aptRef = Database.database().reference().child("BookedApt")
+        
+        aptRef = Database.database().reference().child("BookedAppointment")
             //.queryOrdered(byChild: "userEmail").queryEqual(toValue : Auth.auth().currentUser?.email!)
         
         aptRef.observe(DataEventType.value, with:{(snapshot) in
