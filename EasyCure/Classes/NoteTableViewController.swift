@@ -16,7 +16,7 @@ class NoteTableViewController: UITableViewController, NoteViewDelegate {
     var selectedIndex = 0
     
     @IBAction func newNote(){
-        var newDict = ["title" : "",
+        let newDict = ["title" : "",
                        "body" : ""]
         
         arrNotes.insert(newDict, at: 0)
@@ -57,7 +57,7 @@ class NoteTableViewController: UITableViewController, NoteViewDelegate {
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        var cell = tableView.dequeueReusableCell(withIdentifier: "CELL")!
+        let cell = tableView.dequeueReusableCell(withIdentifier: "CELL")!
         cell.textLabel!.text = arrNotes[indexPath.row]["title"]
         return cell
     }

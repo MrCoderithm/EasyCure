@@ -8,6 +8,9 @@
 
 import UIKit
 import Firebase
+import FirebaseDatabase
+
+
 class BookingViewController: UIViewController , UIPickerViewDelegate, UIPickerViewDataSource {
 
     var docName = ""
@@ -17,13 +20,18 @@ class BookingViewController: UIViewController , UIPickerViewDelegate, UIPickerVi
     var selectedRow = ""
     var AptRef : DatabaseQuery!
     var AptList = [AppointmentModel]()
+    var ref:DatabaseReference?
+    
     
    
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        ref = Database.database().reference()
         lblName.text = docName
-        AptRef = Database.database().reference().child("Appointment").queryOrdered(byChild: "Name").queryEqual(toValue : docName)
+        AptRef = Database.database().reference().child("Appointment")
+            //.queryOrdered(byChild: "Name").queryEqual(toValue : docName)
         
         AptRef.observe(DataEventType.value, with:{(snapshot) in
             if snapshot.childrenCount > 0{
@@ -35,9 +43,14 @@ class BookingViewController: UIViewController , UIPickerViewDelegate, UIPickerVi
                     let appointmentID = appointmentObject?["DocID"]
                     let appointmentTime = appointmentObject?["Time"]
                     
-                    let appointment = AppointmentModel(DocID: appointmentID as! String, Name: appointmentName as! String, Day: appointmentDay as! String, Time: appointmentTime as! String)
+                    let appointment = AppointmentModel(DocID: appointmentID as? String, Name: appointmentName as? String, Day: appointmentDay as? String, Time: appointmentTime as! String)
                     
                     self.AptList.append(appointment)
+                    
+                    
+                    let uid = Auth.auth().currentUser?.uid
+                    self.ref?.child("BookedApt").child(uid!).child("userEmail").setValue(appointmentName)
+                    self.ref?.child("BookedApt").child(uid!).child("Booking").setValue(appointmentDay)
                 }
                 self.appointmentPicker.reloadAllComponents()
             }

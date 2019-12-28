@@ -171,7 +171,23 @@ class SignUpViewController:UIViewController, UITextFieldDelegate {
         Auth.auth().createUser(withEmail: email, password: pass) { user, error in
             if error == nil && user != nil {
                 print("User created!")
-                self.ref?.child("Users").childByAutoId().setValue(self.emailField.text!)
+                let uid = Auth.auth().currentUser?.uid
+//              self.ref?.child("Users").childByAutoId().child("Email").setValue(self.emailField.text!)
+                self.ref?.child("Users").child(uid!).child("Email").setValue(self.emailField.text!)
+                self.ref?.child("Users").child(uid!).child("UserName").setValue(self.usernameField.text!)
+                
+                //      Doctors
+//                self.ref?.child("Doctors").child(uid!).child("Name").setValue(self.emailField.text!)
+//                self.ref?.child("Doctors").child(uid!).child("Profession").setValue(self.emailField.text!)
+//                self.ref?.child("Doctors").child(uid!).child("DocID").setValue(uid!)
+                
+                // Appointments
+//                self.ref?.child("Appointment").child(uid!).child("Name").setValue(self.emailField.text!)
+//                self.ref?.child("Appointment").child(uid!).child("DocID").setValue(uid!)
+//                self.ref?.child("Appointment").child(uid!).child("Time").setValue(uid!)
+//                 self.ref?.child("Appointment").child(uid!).child("Day").setValue(self.emailField.text!)
+                
+             
                 
                 let changeRequest = Auth.auth().currentUser?.createProfileChangeRequest()
                 changeRequest?.displayName = username   

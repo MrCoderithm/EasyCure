@@ -20,7 +20,8 @@ class AppointmentsViewController: UIViewController, UITableViewDelegate, UITable
         
         lblEmail.text = Auth.auth().currentUser?.email!
         
-        aptRef = Database.database().reference().child("BookedApt").queryOrdered(byChild: "userEmail").queryEqual(toValue : Auth.auth().currentUser?.email!)
+        aptRef = Database.database().reference().child("BookedApt")
+            //.queryOrdered(byChild: "userEmail").queryEqual(toValue : Auth.auth().currentUser?.email!)
         
         aptRef.observe(DataEventType.value, with:{(snapshot) in
             if snapshot.childrenCount > 0{
@@ -28,9 +29,9 @@ class AppointmentsViewController: UIViewController, UITableViewDelegate, UITable
                 for bookings in snapshot.children.allObjects as![DataSnapshot]{
                     let bookingObject = bookings.value as? [String : AnyObject]
                     let bookingEmail = bookingObject?["userEmail"]
-                    let bookingString = bookingObject?["booking"]
+                    let bookingString = bookingObject?["Booking"]
                     
-                    let booking = BookingModel(UserEmail: bookingEmail as! String, Booking: bookingString as! String)
+                    let booking = BookingModel(UserEmail: bookingEmail as? String, Booking: bookingString as? String)
                     
                     self.BookingList.append(booking)
                 }
@@ -48,7 +49,7 @@ class AppointmentsViewController: UIViewController, UITableViewDelegate, UITable
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! DoctorTableViewCell
         let booking : BookingModel
         booking = BookingList[indexPath.row]
-        cell.lblName.text = " "
+        cell.lblName.text = booking.UserEmail
         cell.lblProf.text = booking.Booking
         
         return cell

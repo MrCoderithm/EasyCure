@@ -16,7 +16,7 @@ class RoundedWhiteButton:UIButton {
     {
         didSet {
             if isHighlighted {
-                backgroundColor = highlightedColor
+                // backgroundColor = highlightedColor
             }
         }
     }
@@ -24,7 +24,7 @@ class RoundedWhiteButton:UIButton {
     {
         didSet {
             if !isHighlighted {
-                backgroundColor = defaultColor
+               // backgroundColor = defaultColor
             }
         }
     }
@@ -32,10 +32,10 @@ class RoundedWhiteButton:UIButton {
     override var isHighlighted: Bool {
         didSet {
             if isHighlighted {
-                backgroundColor = highlightedColor
+                // backgroundColor = highlightedColor
                 
             } else {
-                backgroundColor = defaultColor
+              //   backgroundColor = defaultColor
             }
         }
     }

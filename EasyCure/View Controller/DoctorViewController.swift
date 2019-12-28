@@ -33,7 +33,7 @@ class DoctorViewController: UIViewController, UITableViewDelegate, UITableViewDa
                     let doctorProf = doctorObject?["Profession"]
                     let doctorId = doctorObject?["DocID"]
                     
-                    let doctor = DoctorModel(DocID: doctorId as! String, Name: doctorName as! String, Profession: doctorProf as! String)
+                    let doctor = DoctorModel(DocID: doctorId as? String, Name: doctorName as? String, Profession: doctorProf as? String)
                     
                     self.DoctorsList.append(doctor)
                 }
@@ -74,7 +74,7 @@ class DoctorViewController: UIViewController, UITableViewDelegate, UITableViewDa
     }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if(segue.identifier == "AptSegue"){
-            var vc = segue.destination as! BookingViewController
+            let vc = segue.destination as! BookingViewController
             vc.docName = self.nameToPass
         }
          

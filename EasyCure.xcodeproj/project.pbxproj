@@ -41,6 +41,9 @@
 		68C800D223B5DCE300A19750 /* bluebackground.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 68C800D123B5DCE300A19750 /* bluebackground.jpg */; };
 		68C800D423B5E1FD00A19750 /* Backbutton.png in Resources */ = {isa = PBXBuildFile; fileRef = 68C800D323B5E1FD00A19750 /* Backbutton.png */; };
 		68C800DE23B5E4CC00A19750 /* signupBackground.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 68C800DD23B5E4CC00A19750 /* signupBackground.jpg */; };
+		68C800E223B6B31700A19750 /* doctor.png in Resources */ = {isa = PBXBuildFile; fileRef = 68C800E123B6B31700A19750 /* doctor.png */; };
+		68C800E423B6B35300A19750 /* chatLogo.png in Resources */ = {isa = PBXBuildFile; fileRef = 68C800E323B6B35300A19750 /* chatLogo.png */; };
+		68C800E623B6B58000A19750 /* chatDoctor.png in Resources */ = {isa = PBXBuildFile; fileRef = 68C800E523B6B58000A19750 /* chatDoctor.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -80,6 +83,9 @@
 		68C800D123B5DCE300A19750 /* bluebackground.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = bluebackground.jpg; sourceTree = "<group>"; };
 		68C800D323B5E1FD00A19750 /* Backbutton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Backbutton.png; sourceTree = "<group>"; };
 		68C800DD23B5E4CC00A19750 /* signupBackground.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = signupBackground.jpg; sourceTree = "<group>"; };
+		68C800E123B6B31700A19750 /* doctor.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = doctor.png; sourceTree = "<group>"; };
+		68C800E323B6B35300A19750 /* chatLogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = chatLogo.png; sourceTree = "<group>"; };
+		68C800E523B6B58000A19750 /* chatDoctor.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = chatDoctor.png; sourceTree = "<group>"; };
 		A44ED8B19774021448EB77FA /* Pods-EasyCure.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EasyCure.release.xcconfig"; path = "Target Support Files/Pods-EasyCure/Pods-EasyCure.release.xcconfig"; sourceTree = "<group>"; };
 		F75FEE40053B71C2BD7D9C8F /* Pods-EasyCure.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EasyCure.debug.xcconfig"; path = "Target Support Files/Pods-EasyCure/Pods-EasyCure.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -189,8 +195,8 @@
 				419D2E6A23B4694D00751F16 /* ChatViewController.swift */,
 				419D2E6B23B4694D00751F16 /* DoctorViewController.swift */,
 				419D2E6223B4694D00751F16 /* BookingViewController.swift */,
-				419D2E6C23B4694D00751F16 /* NotesViewController.swift */,
 				419D2E6523B4694D00751F16 /* AppointmentsViewController.swift */,
+				419D2E6C23B4694D00751F16 /* NotesViewController.swift */,
 			);
 			path = "View Controller";
 			sourceTree = "<group>";
@@ -210,10 +216,13 @@
 				419D2E8723B46DA800751F16 /* background.jpg */,
 				68C800D123B5DCE300A19750 /* bluebackground.jpg */,
 				68C800D323B5E1FD00A19750 /* Backbutton.png */,
+				68C800E523B6B58000A19750 /* chatDoctor.png */,
 				68C800DD23B5E4CC00A19750 /* signupBackground.jpg */,
 				419D2E9323B46E8F00751F16 /* droptop.jpg */,
 				419D2E8623B46DA800751F16 /* startupLogo.png */,
 				419D2E8A23B46DA800751F16 /* logo.png */,
+				68C800E323B6B35300A19750 /* chatLogo.png */,
+				68C800E123B6B31700A19750 /* doctor.png */,
 				419D2E8423B46DA800751F16 /* registerBackground.jpg */,
 				419D2E8523B46DA800751F16 /* startupBackground.jpg */,
 			);
@@ -288,16 +297,19 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				68C800E423B6B35300A19750 /* chatLogo.png in Resources */,
 				419D2E9C23B4822B00751F16 /* GoogleService-Info.plist in Resources */,
 				419D2E8F23B46DA800751F16 /* background.jpg in Resources */,
 				419D2E9423B46E8F00751F16 /* droptop.jpg in Resources */,
 				419D2E8C23B46DA800751F16 /* registerBackground.jpg in Resources */,
 				419D2E5F23B4692F00751F16 /* Main.storyboard in Resources */,
+				68C800E223B6B31700A19750 /* doctor.png in Resources */,
 				68C800D223B5DCE300A19750 /* bluebackground.jpg in Resources */,
 				419D2E8023B46C3800751F16 /* MessageCell.xib in Resources */,
 				68C800DE23B5E4CC00A19750 /* signupBackground.jpg in Resources */,
 				419D2E9A23B46FAB00751F16 /* LaunchScreen.storyboard in Resources */,
 				68C800D423B5E1FD00A19750 /* Backbutton.png in Resources */,
+				68C800E623B6B58000A19750 /* chatDoctor.png in Resources */,
 				419D2E8D23B46DA800751F16 /* startupBackground.jpg in Resources */,
 				419D2E9223B46DA800751F16 /* logo.png in Resources */,
 				419D2E8E23B46DA800751F16 /* startupLogo.png in Resources */,
